@@ -1,7 +1,6 @@
-
-
 import React from 'react';
-import '../Css/Approach.css'
+import '../Css/Approach.css';
+
 const developmentApproachData = [
   {
     title: 'UX Driven Engineering',
@@ -37,17 +36,21 @@ const developmentApproachData = [
 
 const Card = ({ icon, title, description }) => (
   <div className="card">
-    <div className="icon">{icon}</div>
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <div className="card-content">
+      <div className="icon">{icon}</div>
+      <div className="text-content">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
   </div>
 );
 
 function Approach() {
-    return (
-      <div className="approach-container">
-        <h1 className="title">Development Approach</h1>
-        <div className="full-card">
+  return (
+    <div className="approach-container">
+      <h1 className="title approach-title">Development Approach</h1>
+      <div className="full-card">
         <div className="card-container">
           <div className="grid">
             {developmentApproachData.map((item, index) => (
@@ -55,9 +58,9 @@ function Approach() {
             ))}
           </div>
         </div>
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default Approach;

@@ -6,38 +6,40 @@ body {
 }
 
 .approach-container {
-  padding: 2rem;
- 
+  padding: 1rem;
   max-width: 1300px;
-  margin: 5%;
-  /* padding-left: 45%; */
+  margin: 0 auto; /* Center the container horizontally */
+  padding-top: 2rem; /* Add padding at the top */
 }
 
 /* Add card-container class */
 .card-container {
   display: flex;
-  
-  min-height: 100vh;        /* Ensure it takes enough vertical space */
+  justify-content: center;
+  padding: 0; /* Remove any padding causing additional gaps */
+  margin: 0; /* Remove any margin that might create spacing */
 }
 
 /* Center the grid and adjust gap */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Exactly two columns */
-  gap: 30px; /* Increased gap between the cards */
-  max-width: 1300px; /* Ensure grid does not exceed maximum width */
+  grid-template-columns: 1fr 1fr; /* Ensure each column takes equal space */
+  gap: 20px; /* Adjust this as needed */
+  margin: 0; /* Remove any auto margin that may cause centering */
 }
 
 .card {
   background-color: #1a1a30;
   border-radius: 14px;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
-  width: 80%;
-  height: 75%;
-  max-width: 100%;
+  width: 90%; /* Make cards occupy full column width */
+  height: 80%;
+  max-width: 100%; 
+  display: flex;
+  align-items: center;
 }
 
 .card:hover {
@@ -45,20 +47,51 @@ body {
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
 }
 
+.card-content {
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+}
+
 .icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-right: 1rem; /* Add space between the icon and text */
   color: #8f65f1;
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /* Stack title and description vertically */
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #e0e0ff;
   margin-bottom: 0.5rem;
 }
 
 p {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: #b3b3d3;
   line-height: 1.6;
+}
+
+.title {
+  font-size: 2rem;
+ 
+  margin-bottom: 2rem; /* Add some space below the title */
+  position: relative; /* Make it relative to use the ::after pseudo-element */
+}
+
+/* Add a small line under the first three letters */
+.approach-title::after {
+  content: '';
+  display: block;
+  width: 2.5rem; /* Adjust to span under the first three letters */
+  height: 2px; /* Thickness of the line */
+  background: linear-gradient(to right, #F76680, #57007B);
+  position: absolute;
+  top: 2.5rem; /* Position it below the text */
+  left: 0; /* Align it with the start of the title */
+  margin-left: 0.25rem; /* Fine-tune the positioning */
 }
