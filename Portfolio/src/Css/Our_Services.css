@@ -37,8 +37,8 @@
     max-width: 270px;
     min-height: 100%;
     display: flex;
-    align-items: center;
-   /* Ensure card content isn't cut off */
+    flex-direction: column; /* Ensure card content stacks vertically */
+    align-items: center; /* Center content horizontally */
   }
   
   .service-card:hover {
@@ -49,7 +49,14 @@
   /* Flexbox alignment for the card content */
   .service-card-content {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .service-icon img {
+    width: 80px; /* Set icon size */
+    height: 80px;
+    margin-bottom: 1rem; /* Space between icon and text */
   }
   
   .service-icon {
@@ -62,36 +69,39 @@
   .text-content {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center text content */
   }
   
   .service-title {
     font-size: 1.6rem;
     color: #e0e0ff;
     margin-bottom: 0.5rem;
+    text-align: center; /* Center title text */
   }
   
   .service-description {
     font-size: 1.2rem;
     color: #b3b3d3;
     line-height: 1.6;
+    text-align: center; /* Center description text */
   }
   
-  .title {
+  .services-title {
     font-size: 2rem;
-    margin-bottom: rem;
-    position: relative;
+    margin-bottom: 1rem; /* Ensure there's space below the title */
+    position: relative; /* Position relative for the pseudo-element */
   }
   
   .services-title::after {
     content: "";
     display: block;
-    width: 2.5rem;
-    height: 2px;
-    background: linear-gradient(to right, #f76680, #57007b);
-    position: absolute;
-    top: 2.5rem;
-    left: 0;
-    margin-left: 0.25rem;
+    width: 2.5rem; /* Width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background: linear-gradient(to right, #f76680, #57007b); /* Gradient for the underline */
+    position: absolute; /* Position it relative to the title */
+    top: 2.5rem; /* Distance from the title */
+    left: 0; /* Align with the left edge of the title */
+    margin-left: 0.25rem; /* Adjust if needed */
   }
   
   /* Media Queries */
@@ -102,8 +112,14 @@
   }
   
   @media (max-width: 600px) {
+    .services-grid {
+      flex-direction: column; /* Stack cards in a single column */
+      gap: 30px; /* Space between stacked cards */
+    }
+  
     .service-card {
       flex: 1 1 100%; /* Adjust to single-column layout on small screens */
+      max-width: 100%; /* Take full width on smaller screens */
     }
   }
   
