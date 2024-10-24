@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0e0e20;
   color: #ffffff;
 }
@@ -10,6 +10,7 @@ body {
   max-width: 1300px;
   margin: 0 auto; /* Center the container horizontally */
   padding-top: 2rem; /* Add padding at the top */
+  height: 930px;
 }
 
 /* Add card-container class */
@@ -24,7 +25,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Ensure each column takes equal space */
-  gap: 20px; /* Adjust this as needed */
+  gap: 60px; /* Adjust this as needed */
   margin: 0; /* Remove any auto margin that may cause centering */
 }
 
@@ -35,9 +36,9 @@ body {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
-  width: 90%; /* Make cards occupy full column width */
-  height: 80%;
-  max-width: 100%; 
+  width: 100; /* Make cards occupy full column width */
+  height: 90%;
+  max-width: 120%;
   display: flex;
   align-items: center;
 }
@@ -65,31 +66,31 @@ body {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #e0e0ff;
   margin-bottom: 0.5rem;
 }
 
 p {
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   color: #b3b3d3;
   line-height: 1.6;
 }
 
 .title {
   font-size: 2rem;
- 
+
   margin-bottom: 2rem; /* Add some space below the title */
   position: relative; /* Make it relative to use the ::after pseudo-element */
 }
 
 /* Add a small line under the first three letters */
 .approach-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 2.5rem; /* Adjust to span under the first three letters */
   height: 2px; /* Thickness of the line */
-  background: linear-gradient(to right, #F76680, #57007B);
+  background: linear-gradient(to right, #f76680, #57007b);
   position: absolute;
   top: 2.5rem; /* Position it below the text */
   left: 0; /* Align it with the start of the title */
