@@ -9,15 +9,15 @@ body {
   padding: 2rem;
  
   max-width: 1300px;
-  margin: 0 auto;
-  padding-left: 45%;
+  margin: 5%;
+  /* padding-left: 45%; */
 }
 
 /* Add card-container class */
 .card-container {
   display: flex;
   
-  min-height: 80vh;        /* Ensure it takes enough vertical space */
+  min-height: 100vh;        /* Ensure it takes enough vertical space */
 }
 
 /* Center the grid and adjust gap */
@@ -35,8 +35,8 @@ body {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
-  width: 616px;
-  height: 257px;
+  width: 80%;
+  height: 75%;
   max-width: 100%;
 }
 
