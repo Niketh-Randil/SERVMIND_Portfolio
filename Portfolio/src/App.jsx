@@ -5,6 +5,7 @@ import "./App.css";
 import Approach from "./Pages/Dev_Approach";
 import LandingPage from "./Pages/landing_page";
 import Our_Services from "./Pages/Our_Services";
+import RecentProjects from "./Pages/Recent_project";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <LandingPage />
       <Approach />
       <Our_Services />
+      <RecentProjects />
     </div>
   );
 }
