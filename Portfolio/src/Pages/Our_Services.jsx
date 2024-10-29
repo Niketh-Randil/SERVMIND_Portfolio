@@ -1,31 +1,35 @@
 import React from "react";
 import "../Css/Our_Services.css";
-import puk from "../assets/puk.jpg";
+// import puk from "../assets/puk.jpg";
+import pic1 from "../assets/Group (1).png"
+import pic2 from "../assets/Group (2).png"
+import pic3 from "../assets/Group (3).png"
+import pic4 from "../assets/Group.png"
 
 const developmentApproachData = [
   {
     title: "UX Design",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    icon: { puk },
+    icon: { pic1 },
   },
   {
     title: "WebFlow Development",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    icon: { puk },
+    icon: { pic2 },
   },
   {
     title: "Marketing",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    icon: { puk },
+    icon: { pic3 },
   },
   {
     title: "Branding",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    icon: { puk },
+    icon: { pic4 },
   },
 ];
 
