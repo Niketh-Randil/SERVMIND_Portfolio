@@ -8,6 +8,7 @@ import Our_Services from "./Pages/Our_Services";
 import RecentProjects from "./Pages/Recent_project";
 import AboutUs from "./Pages/AboutUs";
 import FeedbackComponent from "./Pages/Feedback";
+import Footer from "./Pages/footer";
 import ContactUs from "./Pages/Contactus";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <AboutUs/>
       <FeedbackComponent/>
       <ContactUs/>
+      <Footer/>
 
     </div>
   );
