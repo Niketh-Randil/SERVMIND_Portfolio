@@ -8,6 +8,7 @@ import Our_Services from "./Pages/Our_Services";
 import RecentProjects from "./Pages/Recent_project";
 import AboutUs from "./Pages/AboutUs";
 import FeedbackComponent from "./Pages/Feedback";
+import ContactUs from "./Pages/Contactus";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
       <RecentProjects />
       <AboutUs/>
       <FeedbackComponent/>
+      <ContactUs/>
 
     </div>
   );
