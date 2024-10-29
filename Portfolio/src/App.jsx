@@ -22,8 +22,8 @@ function App() {
       <RecentProjects />
       <AboutUs/>
       <FeedbackComponent/>
-      <Footer/>
       <ContactUs/>
+      <Footer/>
 
     </div>
   );
