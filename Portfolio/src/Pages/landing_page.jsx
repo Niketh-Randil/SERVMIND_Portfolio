@@ -22,11 +22,14 @@ const LandingPage = () => {
       <div className="hero-section">
         <div className="text-wrapper">
           <h1>
-            Great <span>Product</span> is built by great <span>teams</span>
+            Great <span>Product</span> is built <br/><span className="typing-animation">by great teams</span>
           </h1>
           <p>
             We help build and manage a team of world-class developers to bring
             your vision to life.
+          </p>
+          <p>
+              Showcase Your Work with ServMind’s Creative Solutions
           </p>
           <button className="cta-button">Let's get started!</button>
         </div>
