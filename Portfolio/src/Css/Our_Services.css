@@ -1,125 +1,175 @@
 .services-container {
-    padding-top: 5%;
-    background-color: #1a1a30c6;
-    color: #fff;
-    font-family: "Arial", sans-serif;
-    max-width: 100%;
-    height: 930px;
-    padding-left: 13%;
-    padding-right: 16%;
-    overflow: visible; /* Ensure the container allows overflow during hover */
-  }
-  
-  .services-wrapper {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: visible; /* Allow overflow in the wrapper */
-  }
-  
-  /* Flexbox for a single-row layout */
+  padding-top: 5%;
+  background-color: #1a1a30c6;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  max-width: 100%;
+  height: 930px;
+  padding-left: 13%;
+  padding-right: 16%;
+  overflow: visible; /* Ensure the container allows overflow during hover */
+  position: relative; /* Enables absolute positioning for background images */
+}
+
+.services-wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: visible; /* Allow overflow in the wrapper */
+}
+
+/* Flexbox for a single-row layout */
+.services-grid {
+  display: flex;
+  margin-top: 10%;
+  justify-content: flex-start;
+  gap: 60px;
+  padding-bottom: 50px; /* Add extra padding to accommodate hover movement */
+}
+
+.service-card {
+  background-color: #0e0e20;
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 10px 30px rgba(76, 75, 75, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  min-width: 270px; /* Set a consistent width for each card */
+  max-width: 270px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; /* Ensure card content stacks vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.service-card:hover {
+  transform: translateY(-10px); /* Move the card up */
+  box-shadow: 0px 15px 35px rgba(76, 75, 75, 0.5); /* Slightly increase shadow on hover */
+}
+
+/* Flexbox alignment for the card content */
+.service-card-content {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.service-icon img {
+  width: 80px; /* Set icon size */
+  height: 80px;
+  margin-bottom: 1rem; /* Space between icon and text */
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #8f65f1;
+  flex-shrink: 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center text content */
+}
+
+.service-title {
+  font-size: 1.6rem;
+  color: #e0e0ff;
+  margin-bottom: 0.5rem;
+  text-align: center; /* Center title text */
+}
+
+.service-description {
+  font-size: 1.2rem;
+  color: #b3b3d3;
+  line-height: 1.6;
+  text-align: center; /* Center description text */
+}
+
+.services-title {
+  font-size: 2rem;
+  margin-bottom: 1rem; /* Ensure there's space below the title */
+  position: relative; /* Position relative for the pseudo-element */
+}
+
+.services-title::after {
+  content: "";
+  display: block;
+  width: 2.5rem; /* Width of the underline */
+  height: 2px; /* Thickness of the underline */
+  background: linear-gradient(to right, #f76680, #57007b); /* Gradient for the underline */
+  position: absolute; /* Position it relative to the title */
+  top: 2.5rem; /* Distance from the title */
+  left: 0; /* Align with the left edge of the title */
+  margin-left: 0.25rem; /* Adjust if needed */
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
   .services-grid {
-    display: flex;
-    margin-top: 20%;
-    justify-content: flex-start;
-    gap: 60px;
-    padding-bottom: 50px; /* Add extra padding to accommodate hover movement */
+    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
   }
-  
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    flex-direction: column; /* Stack cards in a single column */
+    gap: 30px; /* Space between stacked cards */
+  }
+
   .service-card {
-    background-color: #0e0e20;
-    border-radius: 14px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0px 10px 30px rgba(76, 75, 75, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    min-width: 270px; /* Set a consistent width for each card */
-    max-width: 270px;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column; /* Ensure card content stacks vertically */
-    align-items: center; /* Center content horizontally */
+    flex: 1 1 100%; /* Adjust to single-column layout on small screens */
+    max-width: 100%; /* Take full width on smaller screens */
   }
-  
-  .service-card:hover {
-    transform: translateY(-10px); /* Move the card up */
-    box-shadow: 0px 15px 35px rgba(76, 75, 75, 0.5); /* Slightly increase shadow on hover */
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
   }
-  
-  /* Flexbox alignment for the card content */
-  .service-card-content {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center content horizontally */
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .service-icon img {
-    width: 80px; /* Set icon size */
-    height: 80px;
-    margin-bottom: 1rem; /* Space between icon and text */
+  100% {
+    transform: translateY(0px);
   }
-  
-  .service-icon {
-    font-size: 2rem;
-    margin-right: 1rem;
-    color: #8f65f1;
-    flex-shrink: 0;
-  }
-  
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center text content */
-  }
-  
-  .service-title {
-    font-size: 1.6rem;
-    color: #e0e0ff;
-    margin-bottom: 0.5rem;
-    text-align: center; /* Center title text */
-  }
-  
-  .service-description {
-    font-size: 1.2rem;
-    color: #b3b3d3;
-    line-height: 1.6;
-    text-align: center; /* Center description text */
-  }
-  
-  .services-title {
-    font-size: 2rem;
-    margin-bottom: 1rem; /* Ensure there's space below the title */
-    position: relative; /* Position relative for the pseudo-element */
-  }
-  
-  .services-title::after {
-    content: "";
-    display: block;
-    width: 2.5rem; /* Width of the underline */
-    height: 2px; /* Thickness of the underline */
-    background: linear-gradient(to right, #f76680, #57007b); /* Gradient for the underline */
-    position: absolute; /* Position it relative to the title */
-    top: 2.5rem; /* Distance from the title */
-    left: 0; /* Align with the left edge of the title */
-    margin-left: 0.25rem; /* Adjust if needed */
-  }
-  
-  /* Media Queries */
-  @media (max-width: 900px) {
-    .services-grid {
-      flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .services-grid {
-      flex-direction: column; /* Stack cards in a single column */
-      gap: 30px; /* Space between stacked cards */
-    }
-  
-    .service-card {
-      flex: 1 1 100%; /* Adjust to single-column layout on small screens */
-      max-width: 100%; /* Take full width on smaller screens */
-    }
-  }
-  
+}
+
+/* Background Floating Images */
+.bg-fill-137 {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 80px;
+  opacity: 1;
+  animation: floating 2s ease-in-out infinite;
+}
+
+.bg-fill-235 {
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  width: 50px;
+  opacity: 1;
+  animation: floating 2s ease-in-out infinite;
+}
+
+.bg-semi {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 30px;
+  opacity: 1;
+  animation: floating 2s ease-in-out infinite;
+}
+
+.bg-fill-133 {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  width: 30px;
+  opacity: 1;
+  animation: floating 2s ease-in-out infinite;
+}
