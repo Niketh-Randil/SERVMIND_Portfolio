@@ -1,7 +1,10 @@
-// src/components/Approach.js
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import '../Css/Approach.css';
+import fill137 from "../assets/Fill 137.png";
+import fill235 from "../assets/Fill 235.png";
+import semi from "../assets/semi.png";
+import fill133 from "../assets/Fill 133.png";
 
 const developmentApproachData = [
   {
@@ -106,6 +109,13 @@ function Approach() {
   return (
     <div className="approach-container">
       <h1 className="title approach-title">Development Approach</h1>
+
+      {/* Floating Background Images */}
+     
+      <img src={fill235} alt="Decorative shape" className="bg-fill-235" />
+      <img src={semi} alt="Decorative shape" className="bg-semi" />
+      <img src={fill133} alt="Decorative shape" className="bg-fill-133" />
+
       <div className="full-card">
         <div className="card-container">
           <div className="grid">
