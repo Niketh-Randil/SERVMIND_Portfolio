@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
 import '../Css/Aboutus.css';
 import pp from '../assets/pp.png';
+import fill137 from '../assets/Fill 137.png';
+import fill235 from '../assets/Fill 235.png';
+import semi from '../assets/semi.png';
+import fill133 from '../assets/Fill 133.png';
 
 const AboutUs = () => {
   const [startCounting, setStartCounting] = useState(false);
@@ -64,6 +68,12 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+
+      {/* Background Floating Images */}
+      <img src={fill137} alt="Decorative shape" className="bg-fill-137" />
+      <img src={fill235} alt="Decorative shape" className="bg-fill-235" />
+      <img src={semi} alt="Decorative shape" className="bg-semi" />
+      <img src={fill133} alt="Decorative shape" className="bg-fill-133" />
     </div>
   );
 };

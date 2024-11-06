@@ -11,16 +11,16 @@ import fill133 from "../assets/Fill 133.png";
 
 const developmentApproachData = [
   {
-    title: "UX Design",
+    title: "UI-UX Design",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    image: pic1,
+    image: pic4,
   },
   {
     title: "WebFlow Development",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    image: pic2,
+    image: pic1,
   },
   {
     title: "Marketing",
@@ -32,7 +32,7 @@ const developmentApproachData = [
     title: "Branding",
     description:
       "Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.",
-    image: pic4,
+    image: pic2,
   },
 ];
 
