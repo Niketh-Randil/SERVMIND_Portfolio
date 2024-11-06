@@ -6,7 +6,7 @@ const recentProjectData = [
   {
     title: "Marketing",
     description:
-      "Our marketing services are data-driven, ensuring that the strategy aligns with your target audience to maximize conversions and brand awareness.",
+      "Our marketing services are data-driven, ensuring that the strategy aligns with your target audience to maximize conversions and brand awareness.Our marketing services are data-driven, ensuring that the strategy aligns with your ",
     icon: puk,
     featured: true,
   },
@@ -19,18 +19,31 @@ const recentProjectData = [
   },
 ];
 
-
 const ProjectItem = ({ icon, title, description, featured, isEven }) => (
-    <article className={`project-item ${featured ? "featured-project" : ""} ${isEven ? "even-project" : ""}`}>
-      <img src={icon} alt={`${title} icon`} className="project-icon" aria-hidden="true" />
-      <div className="project-details">
-        {featured && <span className={`featured-label ${isEven ? "even-label" : ""}`}>Featured Project</span>}
-        <h3 className={`project-title ${isEven ? "even-title" : ""}`}>{title}</h3>
-        <p className={`project-description ${isEven ? "even-description" : ""}`}>{description}</p>
-      </div>
-    </article>
-  );
-  
+  <article
+    className={`project-item ${featured ? "featured-project" : ""} ${
+      isEven ? "even-project" : ""
+    }`}
+  >
+    <img
+      src={icon}
+      alt={`${title} icon`}
+      className="project-icon"
+      aria-hidden="true"
+    />
+    <div className="project-details">
+      {featured && (
+        <span className={`featured-label ${isEven ? "even-label" : ""}`}>
+          Featured Project
+        </span>
+      )}
+      <h3 className={`project-title ${isEven ? "even-title" : ""}`}>{title}</h3>
+      <p className={`project-description ${isEven ? "even-description" : ""}`}>
+        {description}
+      </p>
+    </div>
+  </article>
+);
 
 function RecentProjects() {
   return (

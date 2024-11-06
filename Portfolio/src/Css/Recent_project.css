@@ -13,6 +13,7 @@
   position: relative;
   display: inline-block;
   color: #ffffff;
+  margin-right: 60%;
 }
 
 /* Title underline */
@@ -23,9 +24,9 @@
   height: 3px;
   background: linear-gradient(to right, #ff66cc, #57007b);
   position: absolute;
-  top: 3rem;
-  left: 14%;
-  transform: translateX(-50%);
+  top: 3.2rem;
+  left: 15%;
+  transform: translateX(-53%);
 }
 
 /* Projects Grid */
@@ -34,7 +35,6 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  justify-items: center;
   padding-top: 20px;
 }
 
@@ -48,50 +48,29 @@
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Alternate positioning for odd and even items */
 .project-item:nth-child(odd) {
-  flex-direction: row-reverse;
+  flex-direction: row; /* Image on the left */
+}
+
+.project-item:nth-child(even) {
+  flex-direction: row-reverse; /* Image on the right */
 }
 
 /* Project Icon Styling */
 .project-icon {
-  max-width: 400px;
-  border-radius: 5px;
+  max-width: 500px;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
 }
 
 /* Project Details */
 .project-details {
-  max-width: 600px;
-}
-
-.project-title {
-  font-size: 1.6rem;
-  color: #ffffff;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.featured-label {
-  color: #ff66cc;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: -20px;
-  display: block;
-}
-
-.even-label {
-
-    margin-left: 75%;
-
-
-  }
-
-.project-description {
-  font-size: 1rem;
-  color: white;
-  margin-top: 10px;
-  padding: 20px;
   background: linear-gradient(
     to right,
     rgba(49, 47, 49, 0.4),
@@ -102,40 +81,54 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
-/* Hover Effect for Project Item */
-.project-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
-}
-
-/* Styling for even project items */
-.even-project {
-    
-/* Alternate gradient */
-}
-
-/* Styling for even project titles */
-.even-title {
-    margin-left: 75%;
- /* Alternate color for even titles */
-}
-
-/* Styling for even project descriptions */
-.even-description {
-    background: linear-gradient(
-        to right,
-        rgba(49, 47, 49, 0.4),
-        rgba(255, 255, 255, 0.2)
-      );
+  border-radius: 15px;
+  padding: 20px;
+  margin: -20px; /* Negative margin to create overlap */
   color: #ffffff;
+  z-index: 2;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for Titles */
+.project-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff66cc;
+  margin-left: 75%;
+  margin-top: 0%;
+}
+
+.even-title {
+  margin-left: 0%;
+  /* Alternate color for even titles */
+}
+
+.featured-label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ff66cc;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: 75%;
+}
+
+.even-label {
+  margin-left: 0%;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: white;
+  margin-top: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-item {
-    flex-direction: column;
+    flex-direction: column; /* Stacks elements vertically */
   }
 
   .project-icon {
@@ -145,5 +138,6 @@
 
   .project-details {
     text-align: center;
+    margin: 0;
   }
 }
