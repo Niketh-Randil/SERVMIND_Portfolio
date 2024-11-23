@@ -39,7 +39,7 @@ const LandingPage = () => {
             We help build and manage a team of world-class developers to bring
             your vision to life.
           </p>
-          <p>Showcase Your Work with ServMind’s Creative Solutions</p>
+          <p>Showcase Your Work with ServMind’s Creative Solutions.</p>
           <button className="cta-button">Let's get started!</button>
         </div>
 
